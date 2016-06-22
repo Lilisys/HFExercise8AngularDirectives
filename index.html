@@ -10,11 +10,11 @@
 
 <body ng-app="reddit" ng-controller="mainCtrl">
 	<h1>Redidit</h1>
-	<p>We redid redit so we redidit</p>
+	<p>We redid reddit so we rediddit</p>
 	<div>
     <input ng-model="subreddit" type="text" placeholder="Enter a Subreddit"/>
     <button ng-click="search()">Go!</button>
-    
+
 		<div ng-repeat="post in posts track by $index">
 			<a-post></a-post>
 		</div>
