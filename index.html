@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Posts</title>
+	<title>Reditit</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>	
 	<script src="script.js"></script>
 	<link rel="stylesheet" href="style.css"/>
 </head>
 
-<body ng-app="reddit">
-	
-	<beep></beep>
+<body ng-app="reddit" ng-controller="mainCtrl">
+	<h1>Redidit</h1>
+	<p>We redid redit so we redidit</p>
+	<div>
+    <input ng-model="subreddit" type="text" placeholder="Enter a Subreddit"/>
+    <button ng-click="search()">Go!</button>
+    
+		<div ng-repeat="post in posts track by $index">
+			<a-post></a-post>
+		</div>
+		<h3 ng-click="add()">Add a thing</h3>
+  </div>
+
+
 
 </body>
 
